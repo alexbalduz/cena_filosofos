@@ -8,6 +8,7 @@ class window ():
         self.window.title('La cena de los filósofos')
         self.window.geometry("745x650")
 
+
         #create a button to start the game
         self.start_button = ttk.Button(self.window, text="Iniciar", command=self.run)
         #align the button to the bottom of the window
@@ -46,6 +47,7 @@ class window ():
         self.frame.rowconfigure(1, weight=1)
         self.frame.rowconfigure(2, weight=1)
         self.frame.rowconfigure(3, weight=1)
+
 
         #create a frame on the first row that is 300 pixels wide and 400 pixels high
         self.frame1=ttk.Frame(self.window,width=500,height=260,relief=SUNKEN,borderwidth=5)
@@ -101,7 +103,7 @@ class window ():
         self.color6.place(relx=0.05, rely=0.93, anchor=tk.CENTER)
 
         #add a text on the frame on the second row and second column
-        self.text7 = ttk.Label(self.frame4, text="uántas veces han comido:",font=("Arial", 17, "bold"))
+        self.text7 = ttk.Label(self.frame4, text="Cuántas veces han comido:",font=("Arial", 17, "bold"))
         self.text7.grid(column=0,row=0,sticky=('N','S','E','W'))
 
         self.text8=ttk.Label(self.frame4,text="Filósofo 1:",font=("Arial",15))
@@ -130,6 +132,46 @@ class window ():
         self.text12_1=ttk.Entry(self.frame4,width=14)
         self.text12_1.place(x=80,y=108)
 
+        #create a text with grid
+        self.fil1 = tk.Label(self.frame1, text="Filósofo 1", background="white", height = 2, width = 7)
+        self.fil1.place(x=190,y=25)
+        self.fil1.config(state="disable")
+        self.tenedor1 = tk.Label(self.frame1, text="1", background="white", height = 1, width = 1)
+        self.tenedor1.place(x=150,y=60)
+        self.tenedor1.config(state="disable")
+
+        #create a text with grid
+        self.fil2 = tk.Label(self.frame1, text="Filósofo 5", background="white", height = 2, width = 7)
+        self.fil2.place(x=100,y=100)
+        self.fil2.config(state="disable")
+        self.tenedor5 = tk.Label(self.frame1, text="5", background="white", height = 1, width = 1)
+        self.tenedor5.place(x=140,y=150)
+        self.tenedor5.config(state="disable")
+
+        #create a text with grid
+        self.fil3 = tk.Label(self.frame1, text="Filósofo 2", background="white", height = 2, width = 7)
+        self.fil3.place(x=290,y=80)
+        self.fil3.config(state="disable")
+        self.tenedor2 = tk.Label(self.frame1, text="2", background="white", height = 1, width = 1)
+        self.tenedor2.place(x=280,y=50)
+        self.tenedor2.config(state="disable")
+
+        #create a text with grid
+        self.fil4 = tk.Label(self.frame1, text="Filósofo 4", background="white", height = 2, width = 7)
+        self.fil4.place(x=120,y=180)
+        self.fil4.config(state="disable")
+        self.tenedor4 = tk.Label(self.frame1, text="2", background="white", height = 1, width = 1)
+        self.tenedor4.place(x=210,y=180)
+        self.tenedor4.config(state="disable")
+
+
+        #create a text with grid
+        self.fil5 = tk.Label(self.frame1, text="Filósofo 3", background="white", height = 2, width = 7)
+        self.fil5.place(x=260,y=160)
+        self.fil5.config(state="disable")
+        self.tenedor3 = tk.Label(self.frame1, text="3", background="white", height = 1, width = 1)
+        self.tenedor3.place(x=280,y=130)
+        self.tenedor3.config(state="disable")
 
         self.texto = tk.Text(self.frame2, height=20, width=67) #texto donde va a ir los filósofos pensando
         self.scroll = tk.Scrollbar(self.frame2) #establecemos que nuestra ventana va a tener una barra deslizante
@@ -144,7 +186,8 @@ class window ():
 
     def quit(self):
         self.window.withdraw()
-        self.window.destroy()
 
     def run(self):
         self.window.mainloop()
+
+
