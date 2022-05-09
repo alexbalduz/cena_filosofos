@@ -100,6 +100,35 @@ class window ():
         self.color6 = tk.Label(self.frame3, background="white", height = 1, width = 1)
         self.color6.place(relx=0.05, rely=0.93, anchor=tk.CENTER)
 
+        #add a text on the frame on the second row and second column
+        self.text7 = ttk.Label(self.frame4, text="uántas veces han comido:",font=("Arial", 17, "bold"))
+        self.text7.grid(column=0,row=0,sticky=('N','S','E','W'))
+
+        self.text8=ttk.Label(self.frame4,text="Filósofo 1:",font=("Arial",15))
+        self.text8.grid(column=0,row=2,sticky=('N','S','E','W'))
+        #create a text box next to text8 that will hold the number of times the philosopher 1 has eaten
+        self.text8_1=ttk.Entry(self.frame4,width=14)
+        self.text8_1.place(x=80,y=22)
+
+        self.text9=ttk.Label(self.frame4,text="Filosofo 2:",font=("Arial",15))
+        self.text9.grid(column=0,row=3,sticky=('N','S','E','W'))
+        self.text9_1=ttk.Entry(self.frame4,width=14)
+        self.text9_1.place(x=80,y=44)
+
+        self.text10=ttk.Label(self.frame4,text="Filósofo 3:",font=("Arial",15))
+        self.text10.grid(column=0,row=4,sticky=('N','S','E','W'))
+        self.text10_1=ttk.Entry(self.frame4,width=14)
+        self.text10_1.place(x=80,y=66)
+
+        self.text11=ttk.Label(self.frame4,text="Filósofo 4:",font=("Arial",15))
+        self.text11.grid(column=0,row=5,sticky=('N','S','E','W'))
+        self.text11_1=ttk.Entry(self.frame4,width=14)
+        self.text11_1.place(x=80,y=88)
+
+        self.text12=ttk.Label(self.frame4,text="Filósofo 5:",font=("Arial",15))
+        self.text12.grid(column=0,row=6,sticky=('N','S','E','W'))
+        self.text12_1=ttk.Entry(self.frame4,width=14)
+        self.text12_1.place(x=80,y=108)
 
 
         self.texto = tk.Text(self.frame2, height=20, width=67) #texto donde va a ir los filósofos pensando
