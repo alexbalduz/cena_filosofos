@@ -65,13 +65,3 @@ class filosofo(threading.Thread):
             self.comer() #COME
             self.soltar() #SUELTA LOS TENEDORES
 
-def main():
-    lista=[]
-    for i in range(N):
-        lista.append(filosofo()) #AGREGA UN FILOSOFO A LA LISTA
-
-    for f in lista:
-        f.start() #ES EQUIVALENTE A RUN()
-
-if __name__=="__main__":
-    main()
