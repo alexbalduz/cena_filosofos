@@ -1,13 +1,13 @@
 import tkinter as tk
 from tkinter import SUNKEN
 import tkinter.ttk as ttk
-import sys
+
+
 class window ():
     def __init__(self):
         self.window = tk.Tk() #Creamos la ventana
         self.window.title('La cena de los filósofos')
         self.window.geometry("745x650")
-
 
         #create a button to start the game
         self.start_button = ttk.Button(self.window, text="Iniciar", command=self.run)
@@ -36,6 +36,7 @@ class window ():
         #align the button to the bottom of the window
         self.checkbutton.place(relx=0.1, rely=0.95, anchor=tk.CENTER)
 
+        #Frames
         #create a frame to hold the buttons
         self.frame = ttk.Frame(self.window,relief=SUNKEN,borderwidth=5)
         self.frame.grid(column=0,row=2,columnspan=4,sticky=('N','S','E','W'))
@@ -183,6 +184,11 @@ class window ():
 
     def imprimir(self, texto):
         self.texto.insert(tk.END, str(texto) + '\n')
+
+    #write a function to add a number to an entry
+    def add_number(self, entry, number):
+        entry.insert(tk.END, number)
+
 
     def quit(self):
         self.window.withdraw()

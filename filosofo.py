@@ -21,6 +21,7 @@ class filosofo(threading.Thread):
         filosofo.tenedores.append(threading.Semaphore(0)) #AGREGA EL SEMAFORO DE SU TENEDOR( TENEDOR A LA IZQUIERDA)
         #Ahora en vez de imprimir por pantalla a los filósofos pensando lo imprimiremos por medio de Tkinter con la función imprimir
         self.window.imprimir("FILOSOFO {0} - PENSANDO".format(self.id))
+        # self.window.add_number(self.window.text8_1, self.contador())
 
     def __del__(self):
         self.window.imprimir("FILOSOFO {0} - Se para de la mesa".format(self.id))  #NECESARIO PARA SABER CUANDO TERMINA EL THREAD
@@ -64,6 +65,15 @@ class filosofo(threading.Thread):
             self.tomar() #AGARRA LOS TENEDORES CORRESPONDIENTES
             self.comer() #COME
             self.soltar() #SUELTA LOS TENEDORES
+
+
+    # def contador(self):
+    #     contador = 0
+    #     for i in range(N):
+    #         if filosofo.estado[i] == 'COMIENDO':
+    #             contador += 1
+    #     return contador
+
 
 def main():
     lista=[]
