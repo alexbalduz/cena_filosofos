@@ -175,8 +175,8 @@ class window ():
         self.tenedor3.config(state="disable")
 
         self.texto = tk.Text(self.frame2, height=20, width=67) #texto donde va a ir los filósofos pensando
-        self.scroll = tk.Scrollbar(self.frame2) #establecemos que nuestra ventana va a tener una barra deslizante
-        self.texto.configure(yscrollcommand = self.scroll.set) #configuramos nuestra barra deslizante dentro de nuetro texto
+        self.scroll = tk.Scrollbar(self.frame2)
+        self.texto.configure(yscrollcommand = self.scroll.set)
         self.texto.grid(row=0, column=0, sticky='nsew')
         self.scroll.config (command= self.texto.yview)
         self.scroll.grid(row=0, column=1, sticky='ns')
@@ -185,10 +185,8 @@ class window ():
     def imprimir(self, texto):
         self.texto.insert(tk.END, str(texto) + '\n')
 
-    #write a function to add a number to an entry
     def add_number(self, entry, number):
         entry.insert(tk.END, number)
-
 
     def quit(self):
         self.window.withdraw()
